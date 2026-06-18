@@ -9,10 +9,10 @@ const API_KEY = '1214289316:IOxAQjveWKEG-vGTi-uWBJSZf_6utZtRPxQ'; // توکن ر
 $adminsList   = [692466131]; // آیدی عددی ادمین ها
 $botUserName  = 'Havijbkbot'; // نام کاربری ربات بدون @
 
-$hostName = 'localhost';
-$userName = '';
-$password = '';
-$dbName   = '';
+$hostName = 'mysql.railway.internal';
+$userName = 'root';
+$password = 'KxgDFtVbarLSmxDhlIfsJvjbfktCWdSa';
+$dbName   = 'railway';
 
 try {
     $pdo = new PDO("mysql:host=$hostName;dbname=$dbName", $userName, $password, [
