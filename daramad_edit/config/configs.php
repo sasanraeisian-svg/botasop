@@ -1,8 +1,7 @@
 <?php
 
 ini_set('display_errors', 1);
-error_reporting(1);
-
+error_reporting(E_ALL);
 date_default_timezone_set('Asia/Tehran');
 
 const API_KEY = '1214289316:IOxAQjveWKEG-vGTi-uWBJSZf_6utZtRPxQ'; // توکن ربات
