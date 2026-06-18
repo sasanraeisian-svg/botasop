@@ -38,7 +38,7 @@ $stmt  = $pdo->prepare($query);
 $stmt->execute([$from_id]);
 $currentUser = $stmt->fetch();
 
-if ($currentUser->is_banned && !in_array($from_id, $adminsList)) {
+if ($currentUser && $currentUser->is_banned && !in_array($from_id, $adminsList)) {
     $responseText = "⚠️ شما از ربات مسدود شده اید!\n\nبرای رفع مشکل به پشتیبانی مراجعه کنید";
     sendMessage($from_id, $responseText);
     return;
