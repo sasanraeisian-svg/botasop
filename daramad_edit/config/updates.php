@@ -18,7 +18,7 @@ if (isset($update->message)) {
     $user_name    = getUpdateValue($message->from, 'username', 'ندارد');
     $first_name   = htmlspecialchars(getUpdateValue($message->from, 'first_name'), ENT_QUOTES, 'UTF-8');
     $message_id   = getUpdateValue($message, 'message_id');
-    $file_id      = getUpdateValue($update->message->photo[0], 'file_id');
+    $file_id      = isset($message->photo[0]) ? getUpdateValue($message->photo[0], 'file_id') : 'none';
 }
 
 if (isset($update->callback_query)) {
