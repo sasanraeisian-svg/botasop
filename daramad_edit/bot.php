@@ -29,6 +29,8 @@ include "config/keyboards.php";
 include "function/functions.php";
 include "function/jdf.php";
 
+file_put_contents(__DIR__ . '/debug.log', date('Y-m-d H:i:s') . " | text=" . ($text ?? 'UNSET') . " | type=" . ($type ?? 'UNSET') . " | from_id=" . ($from_id ?? 'UNSET') . "\n", FILE_APPEND);
+
 if (isset($text) && $type == 'group') {
     die;
 }
